@@ -1,9 +1,54 @@
-var express = require('express');
+var express = require("express");
+var User = require("../models").User;
+
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", async (req, res, next) => {
+  try {
+    const users = await User.findAll();
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+});
+
+router.post("/", function(req, res, next) {
+  User.create({
+    pid: req.body.pid,
+    water: req.body.water,
+    notify: req.body.notify
+  })
+    .then(result => {
+      console.log(result);
+      res.status(201).json(result);
+    })
+    .catch(err => {
+      console.error(err);
+      next(err);
+    });
+
+  router.patch("/:pid", function(req, res, next) {
+    User.update(
+      {
+        water: req.body.water,
+        notify: req.body.notify
+      },
+      {
+        where: {
+          pid: req.params.pid
+        }
+      }
+    )
+      .then(result => {
+        console.log(result);
+        res.status(200).json(result);
+      })
+      .catch(err => {
+        console.error(err);
+        next(err);
+      });
+  });
 });
 
 module.exports = router;

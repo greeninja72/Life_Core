@@ -1,9 +1,17 @@
-var express = require('express');
+var express = require("express");
+var User = require("../models").User;
+
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", async (req, res, next) => {
+  try {
+    const users = await User.findAll();
+    res.render("lifecore", { users });
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
 });
 
 module.exports = router;
