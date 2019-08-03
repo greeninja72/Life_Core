@@ -49,7 +49,6 @@ document.getElementById("user-form").addEventListener("submit", function(e) {
   if (water < 2000) {
     notify = true;
   }
-  alert(notify);
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     if (xhr.status === 201) {
@@ -80,7 +79,6 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
   }
   if (water < 2000) {
     notify = true;
-    alert("Please enter the update product ID" + water + notify);
   }
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
