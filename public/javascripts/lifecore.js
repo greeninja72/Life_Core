@@ -19,7 +19,13 @@ function getUser() {
         td.textContent = user.pid;
         row.appendChild(td);
         td = document.createElement("td");
+        td.textContent = user.language;
+        row.appendChild(td);
+        td = document.createElement("td");
         td.textContent = user.water;
+        row.appendChild(td);
+        td = document.createElement("td");
+        td.textContent = user.filter;
         row.appendChild(td);
         td = document.ceeateElement("td");
         td.textContent = user.notify ? "true" : "false";
@@ -39,6 +45,7 @@ document.getElementById("user-form").addEventListener("submit", function(e) {
   e.preventDefault();
   var pid = e.target.pid.value;
   var water = e.target.water.value;
+  var filter = e.target.filter.value;
   var notify = false;
   if (!pid) {
     return alert("Please enter the product ID");
@@ -46,7 +53,10 @@ document.getElementById("user-form").addEventListener("submit", function(e) {
   if (!water) {
     return alert("Please enter the water size");
   }
-  if (water < 2000) {
+  if (!filter) {
+    return alert("Please enter the filter size");
+  }
+  if (filter < 2000) {
     notify = true;
   }
   var xhr = new XMLHttpRequest();
@@ -60,9 +70,17 @@ document.getElementById("user-form").addEventListener("submit", function(e) {
   };
   xhr.open("POST", "/users");
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(JSON.stringify({ pid: pid, water: water, notify: notify }));
+  xhr.send(
+    JSON.stringify({
+      pid: pid,
+      water: water,
+      filter: filter,
+      notify: notify
+    })
+  );
   e.target.pid.value = "";
   e.target.water.value = "";
+  e.target.filter.value = "";
 });
 
 // update
@@ -70,6 +88,7 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
   e.preventDefault();
   var pid = e.target.pid.value;
   var water = e.target.water.value;
+  var filter = e.target.filter.value;
   var notify = false;
   if (!pid) {
     return alert("Please enter the update product ID");
@@ -77,7 +96,10 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
   if (!water) {
     return alert("Please enter the update water size");
   }
-  if (water < 2000) {
+  if (!filter) {
+    return alert("Please enter the update filter size");
+  }
+  if (filter < 2000) {
     notify = true;
   }
   var xhr = new XMLHttpRequest();
@@ -91,7 +113,15 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
   };
   xhr.open("PATCH", "/users/" + pid);
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(JSON.stringify({ pid: pid, water: water, notify: notify }));
+  xhr.send(
+    JSON.stringify({
+      pid: pid,
+      water: water,
+      filter: filter,
+      notify: notify
+    })
+  );
   e.target.pid.value = "";
   e.target.water.value = "";
+  e.target.filter.value = "";
 });

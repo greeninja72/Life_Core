@@ -1,0 +1,128 @@
+
+> lifecore@0.0.0 start /root/nodejs/lifecore
+> node ./bin/www
+
+(node:2054) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `pid` VARCHAR(20) NOT NULL UNIQUE COMMENT 'Product ID', `water` INTEGER UNSIGNED NOT NULL COMMENT 'Water Size', `notify` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `deletedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `users` FROM `lifecore`
+
+> lifecore@0.0.0 start /root/nodejs/lifecore
+> node ./bin/www
+
+(node:2201) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `pid` VARCHAR(20) NOT NULL UNIQUE COMMENT 'Product ID', `water` INTEGER UNSIGNED NOT NULL COMMENT 'Water Size', `notify` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `deletedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `users` FROM `lifecore`
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m17.227 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m4.490 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.005 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.632 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.395 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.371 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.193 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.481 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.975 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.662 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.361 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.986 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m633.437 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m5.031 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.708 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m46.679 ms - 1417[0m
+[0mGET /javascripts/lifecore.js [32m200 [0m4.282 ms - 2821[0m
+[0mGET /favicon.ico [33m404 [0m27.160 ms - 1945[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.675 ms - 148[0m
+Executing (default): UPDATE `users` SET `water`=?,`notify`=?,`updatedAt`=? WHERE (`deletedAt` IS NULL AND `pid` = ?)
+[ 1 ]
+[0mPATCH /users/test1111 [32m200 [0m36.611 ms - 3[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m35.412 ms - 1419[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.989 ms - -[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.491 ms - 150[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.829 ms - 150[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.471 ms - 150[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.662 ms - 150[0m
+Executing (default): UPDATE `users` SET `water`=?,`notify`=?,`updatedAt`=? WHERE (`deletedAt` IS NULL AND `pid` = ?)
+[ 1 ]
+[0mPATCH /users/test1111 [32m200 [0m6.851 ms - 3[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m42.506 ms - 1417[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.431 ms - -[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m4.140 ms - 148[0m
+Executing (default): UPDATE `users` SET `water`=?,`notify`=?,`updatedAt`=? WHERE (`deletedAt` IS NULL AND `pid` = ?)
+[ 1 ]
+[0mPATCH /users/test1111 [32m200 [0m6.651 ms - 3[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m61.456 ms - 1419[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.332 ms - -[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.627 ms - 150[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m4.546 ms - 150[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.743 ms - 150[0m
+Executing (default): UPDATE `users` SET `water`=?,`notify`=?,`updatedAt`=? WHERE (`deletedAt` IS NULL AND `pid` = ?)
+[ 1 ]
+[0mPATCH /users/test1111 [32m200 [0m6.725 ms - 3[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m51.554 ms - 1417[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.333 ms - -[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m9.593 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m2.330 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.551 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL AND `user`.`pid` = 'test1111');
+[0mPOST /users/test1111 [32m200 [0m3.626 ms - 148[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m34.730 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m34.898 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m58.868 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m28.527 ms - 1417[0m
+[0mGET /favicon.ico [33m404 [0m14.817 ms - 1945[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m27.799 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m38.768 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m29.479 ms - 1417[0m
+[0mGET /favicon.ico [33m404 [0m7.229 ms - 1945[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m23.035 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m21.352 ms - 1417[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [32m200 [0m25.297 ms - 1417[0m
+[0mGET /javascripts/lifecore.js [32m200 [0m3.098 ms - 2821[0m
+[0mGET /favicon.ico [33m404 [0m6.943 ms - 1945[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [36m304 [0m21.052 ms - -[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.364 ms - -[0m
+Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
+[0mGET / [36m304 [0m18.441 ms - -[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.339 ms - -[0m

@@ -17,6 +17,7 @@ router.post("/", function(req, res, next) {
   User.create({
     pid: req.body.pid,
     water: req.body.water,
+    filter: req.body.filter,
     notify: req.body.notify
   })
     .then(result => {
@@ -55,6 +56,7 @@ router.patch("/:pid", function(req, res, next) {
   User.update(
     {
       water: req.body.water,
+      filter: req.body.filter,
       notify: req.body.notify
     },
     {

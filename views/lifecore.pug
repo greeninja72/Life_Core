@@ -23,28 +23,36 @@ html
                         input#pid(type="text" placeholder="Product ID")
                     div
                         input#water(type="number" placeholder="Water Size")
+                    div
+                        input#filter(type="number" placeholder="Filter Size")
                     button(type="submit") create
             form#update-form
                 fieldset
                     legend Update
                     div
-                        input#pid(type="text" placeholder="Update product ID")
+                        input#pid(type="text" placeholder="Update Product ID")
                     div
-                        input#water(type="number" placeholder="Update water Size")
+                        input#water(type="number" placeholder="Update Water Size")
+                    div
+                        input#filter(type="number" placeholder="Update Filter Size")
                     button(type="submit") update             
             table#user-list
                 thead
                     tr  
-                        th id   
-                        th pid  
+                        th id
+                        th pid   
+                        th language  
                         th water 
+                        th filter
                         th notify       
                     tbody
                         for user in users
                             tr
                                 td= user.id
                                 td= user.pid
+                                td= user.language
                                 td= user.water
+                                td= user.filter
                                 td= user.notify ? "true" : "false"    
             
 script(src="/javascripts/lifecore.js")

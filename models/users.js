@@ -1,22 +1,34 @@
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define(
-    "user",
+  const users = sequelize.define(
+    "users",
     {
       pid: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.STRING(12),
         allowNull: false,
         unique: true,
-        comment: "Product ID"
+        comment: "product id"
+      },
+      language: {
+        type: DataTypes.STRING(3),
+        allowNull: false,
+        defaultValue: "KOR",
+        comment: "language"
       },
       water: {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
-        comment: "Water Size"
+        comment: "today's drinking amount of water"
+      },
+      filter: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false,
+        comment: "remaining filter"
       },
       notify: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
-        comment: ""
+        comment: "silver care"
       }
     },
     {
@@ -24,4 +36,8 @@ module.exports = (sequelize, DataTypes) => {
       paranoid: true
     }
   );
+  users.associate = function(models) {
+    // associations can be defined here
+  };
+  return users;
 };
