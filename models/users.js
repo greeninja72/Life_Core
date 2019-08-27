@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       notify: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
         comment: "silver care"
       }
     },

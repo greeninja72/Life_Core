@@ -17,8 +17,7 @@ router.post("/", function(req, res, next) {
   User.create({
     pid: req.body.pid,
     water: req.body.water,
-    filter: req.body.filter,
-    notify: req.body.notify
+    filter: req.body.filter
   })
     .then(result => {
       console.log(result);
@@ -37,7 +36,9 @@ router.post("/:pid", async (req, res, next) => {
         {
           id: req.body.id,
           pid: req.body.pid,
+          language: req.body.language,
           water: req.body.water,
+          filter: req.body.filter,
           notify: req.body.notify
         }
       ],
@@ -56,8 +57,7 @@ router.patch("/:pid", function(req, res, next) {
   User.update(
     {
       water: req.body.water,
-      filter: req.body.filter,
-      notify: req.body.notify
+      filter: req.body.filter
     },
     {
       where: {
