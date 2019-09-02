@@ -89,7 +89,6 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
   var pid = e.target.pid.value;
   var water = e.target.water.value;
   var filter = e.target.filter.value;
-  var notify = false;
   if (!pid) {
     return alert("Please enter the update product ID");
   }
@@ -98,9 +97,6 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
   }
   if (!filter) {
     return alert("Please enter the update filter size");
-  }
-  if (filter < 2000) {
-    notify = true;
   }
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
@@ -111,14 +107,13 @@ document.getElementById("update-form").addEventListener("submit", function(e) {
       console.error(xhr.responseText);
     }
   };
-  xhr.open("PATCH", "/users/" + pid);
+  xhr.open("POST", "/users/" + pid);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(
     JSON.stringify({
       pid: pid,
       water: water,
-      filter: filter,
-      notify: notify
+      filter: filter
     })
   );
   e.target.pid.value = "";

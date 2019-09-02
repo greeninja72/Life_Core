@@ -126,3 +126,23 @@ Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `update
 Executing (default): SELECT `id`, `pid`, `water`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `user` WHERE (`user`.`deletedAt` IS NULL);
 [0mGET / [36m304 [0m18.441 ms - -[0m
 [0mGET /javascripts/lifecore.js [36m304 [0m0.339 ms - -[0m
+
+> lifecore@0.0.0 start /root/nodejs/lifecore
+> node ./bin/www
+
+(node:25527) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `pid` VARCHAR(12) NOT NULL UNIQUE COMMENT 'product id', `language` VARCHAR(3) NOT NULL DEFAULT 'KOR' COMMENT 'language', `water` INTEGER UNSIGNED NOT NULL COMMENT 'today\'s drinking amount of water', `filter` INTEGER UNSIGNED NOT NULL COMMENT 'remaining filter', `notify` TINYINT(1) NOT NULL DEFAULT false COMMENT 'silver care', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `deletedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `users` FROM `lifecore`
+
+> lifecore@0.0.0 start /root/nodejs/lifecore
+> node ./bin/www
+
+(node:25716) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `pid` VARCHAR(12) NOT NULL UNIQUE COMMENT 'product id', `language` VARCHAR(3) NOT NULL DEFAULT 'KOR' COMMENT 'language', `water` INTEGER UNSIGNED NOT NULL COMMENT 'today\'s drinking amount of water', `filter` INTEGER UNSIGNED NOT NULL COMMENT 'remaining filter', `notify` TINYINT(1) NOT NULL DEFAULT false COMMENT 'silver care', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `deletedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `users` FROM `lifecore`
+Executing (default): SELECT `id`, `pid`, `language`, `water`, `filter`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `users` WHERE (`users`.`deletedAt` IS NULL);
+[0mGET / [36m304 [0m350.743 ms - -[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m1.902 ms - -[0m
+Executing (default): SELECT `id`, `pid`, `language`, `water`, `filter`, `notify`, `createdAt`, `updatedAt`, `deletedAt` FROM `users` AS `users` WHERE (`users`.`deletedAt` IS NULL);
+[0mGET / [36m304 [0m61.164 ms - -[0m
+[0mGET /javascripts/lifecore.js [36m304 [0m0.598 ms - -[0m
